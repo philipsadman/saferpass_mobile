@@ -1,27 +1,19 @@
-html {
+html, body, #wrapper {
 	width: 100%;
+	overflow: hidden;
 }
 
 body {
 	font-family: "Segoe UI";
 	margin: 0;
 	padding: 0;
-	width: 100%;
 }
 
 .hidden {
 	display: none !important;
 }
-.placeholder {
-	position: absolute;
-
-	color: #ccc;
-	font-style: italic;
-}
 
 #wrapper {
-	width: 100%;
-	overflow: hidden;
 	padding-bottom: 8pt;
 }
 
@@ -31,25 +23,25 @@ body {
 }
 
 #header .logo-wrapper {
-	height: 60pt;
-	line-height: 48pt;
-	background: #393c45;
-	line-height: 59pt;
+	height: 40pt;
+	line-height: 38pt;
+
+	background: #fff;
 }
 
 #header .logo {
 	vertical-align: middle;
-	width: 40pt;
+	width: 24pt;
 	margin-left: 10pt;
 }
 
 #header .title {
-	font-size: 22pt;
+	font-size: 16pt;
 	font-family: Segoe UI;
 	margin-left: 5pt;
 	display: inline-block;
 	vertical-align: middle;
-	color: #fff;
+	color: #000;
 }
 
 #mainSection {
@@ -58,14 +50,35 @@ body {
 }
 
 #mainSection .content {
-	margin-top: 15%;
+	margin-top: 15pt;
+}
+
+#mainSection .title {
+	font-size: 20pt;
+}
+#mainSection .input {
+	width: 80%;
+	font-size: 10pt;
+	padding: 3pt;
+}
+
+#mainSection .fields  {
+	margin-top: 15pt;
+}
+
+#mainSection .field  {
+	width: 100%;
+	margin-top: 10pt;
+}
+#mainSection .field:first-child  {
+	margin-top: 0pt;
 }
 
 #controls {
-	height: 50pt;
+	height: 40pt;
 	width: 100%;
 
-	line-height: 48pt;
+	line-height: 38pt;
 	position: relative;
 
 	background: #f3f3f3;
@@ -75,36 +88,38 @@ body {
 .control-button {
 	width: 20pt;
 	height: 20pt;
-	border-radius: 3px;
+
 	color: #AAABAD;
 	font-size: 14pt;
 	text-align: center;
-	display: inline-block;
+
+	border-radius: 3pt;
+	border: 1pt solid #ccc;
 	background: #fff;
-	border: 1px solid #ccc;
+
+	display: inline-block;
 	vertical-align: middle;
+}
+.back-to-prev {
+	font-size: 6pt;
 }
 
 .search {
-	position: absolute;
-	top: 50px;
-	right: 25px;
+	display: inline-block;
+	height: 100%;
 
 	color: #eee;
+	float: right;
+	margin-right: 20pt;
 }
-.search .placeholder {
-	top: 13px;
-	left: 20px;
 
-	font-size: 64px;
-}
 #search {
-	/* height: 25pt; */
-	width: 90%;
-	border: 1px solid silver;
-	font-size: 14pt;
+	vertical-align: middle;
+
+	border: 1pt solid silver;
+	font-size: 13pt;
 	width: 110pt;
-	padding: 2pt;
+	padding: 2pt 4pt 2pt 4pt;
 }
 #search:focus {
 	outline: none;
@@ -115,40 +130,6 @@ body {
 	text-align: center;
 }
 
-#loginPage .title {
-	font-size: 64px;
-
-	text-align: center;
-}
-
-#loginPage .fields {
-	display: inline-block;
-	margin-top: 30px;
-}
-
-#loginPage .field-wrapper {
-	position: relative;
-
-	margin-top: 10px;
-}
-
-#loginPage .placeholder {
-	top: 20px;
-	left: 20px;
-
-	font-size: 72px;
-}
-
-#loginPage .field {
-	width: 500px;
-	height: 100px;
-
-	font-size: 64px;
-
-	padding-left: 20px;
-
-	border: 2px solid silver;
-}
 #loginPage .field:focus {
     outline: none;
     border-color: silver;
@@ -161,41 +142,50 @@ body {
 #addNew {
 	text-align: center;
 }
-#addNew .title {
-	font-size: 22pt;
-}
-#addNew .fields {
-}
-#addNew .field  {
-	width: 75%;
-	height: 24pt;
-	margin-top: 20px;
-	display: inline-block;
-}
-#addNew .field .input {
-	width: 100%;
-	font-size: 10pt;
-	padding: 6pt 3pt;
-}
-#addNew .field .label {
-	float: right;
-	line-height: 100px;
-	font-size: 32px;
-	margin-right: 50px;
-}
+
 #addNew .add-new-button {
 	width: 115pt;
 	height: 25pt;
-	/* border: 2px solid #000; */
+
 	border: none;
-	border-radius: 6px;
+	border-radius: 6pt;
 	background: #e24429;
 	box-shadow: none;
 	text-align: center;
 	font-size: 15pt;
 	font-weight: 600;
 	color: #fff;
-	margin-top: 50px;
+	margin-top: 30pt;
 	transition: background-color 120ms linear;
 	border-bottom: 1pt solid rgb(199, 138, 138);
+}
+
+.accounts {
+	margin-top: 20pt;
+}
+
+.accounts .account {
+	width: 90%;
+	margin: 5pt 0 0 10pt;
+	padding: 5pt 0 5pt 5pt;
+	display: inline-block;
+}
+.accounts .account:hover {
+	background: #eee;
+}
+
+.accounts .url {
+	display: inline-block;
+	width: 50%;
+	line-height: 32pt;
+	float: left;
+	margin-left: 20pt;
+}
+.accounts .icon {
+	width: 32pt;
+	height: 32pt;
+
+	float: left;
+	display: inline-block;
+	background: blue;
 }
