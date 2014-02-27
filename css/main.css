@@ -1,0 +1,201 @@
+html {
+	width: 100%;
+}
+
+body {
+	font-family: "Segoe UI";
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.hidden {
+	display: none !important;
+}
+.placeholder {
+	position: absolute;
+
+	color: #ccc;
+	font-style: italic;
+}
+
+#wrapper {
+	width: 100%;
+	overflow: hidden;
+	padding-bottom: 8pt;
+}
+
+#header {
+	display: inline-block;
+	width: 100%;
+}
+
+#header .logo-wrapper {
+	height: 60pt;
+	line-height: 48pt;
+	background: #393c45;
+	line-height: 59pt;
+}
+
+#header .logo {
+	vertical-align: middle;
+	width: 40pt;
+	margin-left: 10pt;
+}
+
+#header .title {
+	font-size: 22pt;
+	font-family: Segoe UI;
+	margin-left: 5pt;
+	display: inline-block;
+	vertical-align: middle;
+	color: #fff;
+}
+
+#mainSection {
+	width: 100%;
+	display: inline-block;
+}
+
+#mainSection .content {
+	margin-top: 15%;
+}
+
+#controls {
+	height: 50pt;
+	width: 100%;
+
+	line-height: 48pt;
+	position: relative;
+
+	background: #f3f3f3;
+	padding-left: 10pt;
+}
+
+.control-button {
+	width: 20pt;
+	height: 20pt;
+	border-radius: 3px;
+	color: #AAABAD;
+	font-size: 14pt;
+	text-align: center;
+	display: inline-block;
+	background: #fff;
+	border: 1px solid #ccc;
+	vertical-align: middle;
+}
+
+.search {
+	position: absolute;
+	top: 50px;
+	right: 25px;
+
+	color: #eee;
+}
+.search .placeholder {
+	top: 13px;
+	left: 20px;
+
+	font-size: 64px;
+}
+#search {
+	/* height: 25pt; */
+	width: 90%;
+	border: 1px solid silver;
+	font-size: 14pt;
+	width: 110pt;
+	padding: 2pt;
+}
+#search:focus {
+	outline: none;
+	border-color: silver;
+}
+
+#loginPage {
+	text-align: center;
+}
+
+#loginPage .title {
+	font-size: 64px;
+
+	text-align: center;
+}
+
+#loginPage .fields {
+	display: inline-block;
+	margin-top: 30px;
+}
+
+#loginPage .field-wrapper {
+	position: relative;
+
+	margin-top: 10px;
+}
+
+#loginPage .placeholder {
+	top: 20px;
+	left: 20px;
+
+	font-size: 72px;
+}
+
+#loginPage .field {
+	width: 500px;
+	height: 100px;
+
+	font-size: 64px;
+
+	padding-left: 20px;
+
+	border: 2px solid silver;
+}
+#loginPage .field:focus {
+    outline: none;
+    border-color: silver;
+
+	-moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+#addNew {
+	text-align: center;
+}
+#addNew .title {
+	font-size: 22pt;
+}
+#addNew .fields {
+}
+#addNew .field  {
+	width: 75%;
+	height: 24pt;
+	margin-top: 20px;
+	display: inline-block;
+}
+#addNew .field .input {
+	width: 100%;
+	font-size: 10pt;
+	padding: 6pt 3pt;
+}
+#addNew .field .label {
+	float: right;
+	line-height: 100px;
+	font-size: 32px;
+	margin-right: 50px;
+}
+#addNew .add-new-button {
+	width: 115pt;
+	height: 25pt;
+	/* border: 2px solid #000; */
+	border: none;
+	border-radius: 6px;
+	background: #e24429;
+	box-shadow: none;
+	text-align: center;
+	font-size: 15pt;
+	font-weight: 600;
+	color: #fff;
+	margin-top: 50px;
+	transition: background-color 120ms linear;
+	border-bottom: 1pt solid rgb(199, 138, 138);
+}

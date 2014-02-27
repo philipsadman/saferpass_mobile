@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+		<link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+
+			<header id="header">
+				<div class="logo-wrapper">
+					<img class="logo" src="../images/128x128.png">
+					<div class="title">SaferPass</div>
+				</div>
+			</header>
+
+			<div id="mainSection">
+
+				<div id="controls" class="hidden">
+					<div class="back-to-prev control-button hidden">prev</div>
+					<button class="add-new-account control-button">+</button>
+					<button class="remove-account control-button">-</button>
+					<div class="search hidden">
+						<div class="field-wrapper">
+							<input id="search" placeholder="Search...">
+						</div>
+					</div>
+				</div>
+
+				<div id="loginPage" class="hidden content">
+					<div class="title">
+						Login
+					</div>
+					<div class="fields">
+						<div class="field-wrapper">
+							<input type="email" class="field login" /> <!-- type="text" ?? -->
+							<div class="placeholder">Username</div>
+						</div>
+						<div class="field-wrapper">
+							<input type="password" class="field password" />
+							<div class="placeholder">Password</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="accountsPage" class="hidden">
+					<div class="accounts"></div> <!-- filling in via js -->
+					<div class="account-preview"></div> <!-- filling in via js -->
+				</div>
+
+				<div id="addNew" class="content">
+					<div class="title">Add new account</div>
+					<div class="fields">
+						<div class="field">
+							<input class="input" placeholder="URL"/><!-- 
+							<div class="label">URL</div> -->
+						</div>
+						<div class="field">
+							<input class="input" placeholder="Login"/><!-- 
+							<div class="label">Login</div> -->
+						</div>
+						<div class="field">
+							<input class="input" placeholder="Password"/><!-- 
+							<div class="label">Password</div> -->
+						</div>
+					</div>
+					<button class="add-new-button button">Add</button>
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>
