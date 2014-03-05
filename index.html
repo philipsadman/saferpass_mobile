@@ -3,8 +3,13 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
 
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+
+		<script src="js/zepto.js"></script>
+		<script src="js/main.js"></script>
 	</head>
 
 	<body>
@@ -20,71 +25,268 @@
 			<div id="mainSection">
 
 				<div id="controls" class="">
-					<button class="back-to-prev control-button ">prev</button>
+					<button class="back-to-prev control-button">prev</button>
 					<button class="add-new-account control-button">+</button>
-					<button class="remove-account control-button">-</button>
-					<div class="search ">
+					<div class="search">
 						<input id="search" placeholder="Search...">
 					</div>
 				</div>
 
-				<div id="loginPage" class="content hidden">
-					<div class="title">Login</div>
-					<div class="fields">
-						<div class="field">
-							<input type="email" class="input login" placeholder="Username" /> <!-- type="text" ?? -->
+
+				<div id="contentsWrapper">
+					<div class="contents">
+						<div id="loginPage" class="content">
+							<!-- <div class="title">Login</div>
+							 --><div class="fields">
+								<div class="field">
+									<input type="email" class="input login" placeholder="Username" /> <!-- type="text" ?? -->
+								</div>
+								<div class="field">
+									<input type="password" class="input password" placeholder="Password" />
+								</div>
+							</div>
+							<button class="login-button button">Login</button>
 						</div>
-						<div class="field">
-							<input type="password" class="input password" placeholder="Password" />
+
+						<div id="accountsPage" class="content">
+							<!-- <div class="title">Accounts</div> -->
+							<div class="accounts">
+								<div class="account">
+									<div class="icon">
+										<img src="images/1.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">philipsadman@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/2.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">yafilip@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/1.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">philipsadman@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/2.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">yafilip@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/1.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">philipsadman@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/2.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">yafilip@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/1.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">philipsadman@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/2.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">yafilip@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/1.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">philipsadman@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/2.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">yafilip@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/1.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">philipsadman@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/2.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">yafilip@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/1.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">philipsadman@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/2.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">yafilip@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/1.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">philipsadman@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/2.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">yafilip@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/1.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">philipsadman@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/2.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">yafilip@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/1.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">philipsadman@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/2.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">yafilip@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/1.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">philipsadman@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/2.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">yafilip@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/1.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">philipsadman@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/2.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">yafilip@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/1.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">philipsadman@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/2.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">yafilip@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/1.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">philipsadman@gmail.com</div>
+								</div>
+								<div class="account">
+									<div class="icon">
+										<img src="images/2.png">
+									</div>
+									<div class="url">Facebook.com</div>
+									<div class="username">yafilip@gmail.com</div>
+								</div>
+							</div>
 						</div>
+
+						<div id="accountPreviewPage" class="content">
+							<!-- <div class="title">Account preview</div> -->
+							<div class="account-wrapper">
+								<div class="icon">
+									<img src="images/1.png">
+								</div>
+								<div class="url-username-wrapper">
+									<div class="url">Facebook.com</div>
+									<div class="username">yafilip@gmail.com</div>
+								</div>
+								<button class="go-to-site control-button">go</button>
+							</div>
+						</div>
+
+					</div>
+					<div id="addNew" class="">
+						<div class="title">Add new account</div>
+						<div class="fields">
+							<div class="field">
+								<input class="input" placeholder="URL"/>
+							</div>
+							<div class="field">
+								<input class="input" placeholder="Login"/>
+							</div>
+							<div class="field">
+								<input class="input" placeholder="Password"/>
+							</div>
+						</div>
+						<button class="add-new-button button">Add</button>
 					</div>
 				</div>
-
-				<div id="accountsPage" class="content">
-					<div class="title">Accounts</div>
-					<div class="accounts">
-						<div class="account">
-							<div class="icon"></div>
-							<div class="url">Facebook.com</div>
-							<div class="username">philipsadman@gmail.com</div>
-						</div>
-						<div class="account">
-							<div class="icon"></div>
-							<div class="url">Facebook.com</div>
-							<div class="username">yafilip@gmail.com</div>
-						</div>
-					</div>
-				</div>
-
-				<div id="accountPreviewPage" class="content">
-					<div class="title">Account preview</div>
-					<div class="account-wrapper">
-						<div class="icon"></div>
-						<div class="url-username-wrapper">
-							<div class="url">Facebook.com</div>
-							<div class="username">yafilip@gmail.com</div>
-						</div>
-						<button class="go-to-site control-button">go</button>
-					</div>
-				</div>
-
-				<div id="addNew" class="content hidden">
-					<div class="title">Add new account</div>
-					<div class="fields">
-						<div class="field">
-							<input class="input" placeholder="URL"/>
-						</div>
-						<div class="field">
-							<input class="input" placeholder="Login"/>
-						</div>
-						<div class="field">
-							<input class="input" placeholder="Password"/>
-						</div>
-					</div>
-					<button class="add-new-button">Add</button>
-				</div>
-
 			</div>
+
 		</div>
+
+		<footer id="footer">
+			Copyright © 2013 - Safer Technologies Inc. All Rights Reserved
+		</footer>
 	</body>
 </html>

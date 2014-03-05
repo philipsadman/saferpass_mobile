@@ -1,16 +1,19 @@
-html, body, #wrapper {
+html, body, #wrapper, #mainSection, #contentsWrapper {
 	width: 100%;
-	overflow: hidden;
+	height: auto;
+	overflow-x: hidden;
+	position: relative;
+	-webkit-touch-overflow: scroll;
 }
 
 body {
-	font-family: "Segoe UI";
-	margin: 0;
-	padding: 0;
+	font-family: "Helvetica Neue";
+	font-weight: lighter;
 }
 
-.hidden {
-	display: none !important;
+input, select, textarea {
+	font-family: "Helvetica Neue";
+	font-weight: lighter;
 }
 
 #wrapper {
@@ -20,13 +23,13 @@ body {
 #header {
 	display: inline-block;
 	width: 100%;
+	background: rgba(0, 0, 0, 0.10);
+	position: absolute;
 }
 
 #header .logo-wrapper {
-	height: 40pt;
+	height: 10%;
 	line-height: 38pt;
-
-	background: #fff;
 }
 
 #header .logo {
@@ -37,54 +40,108 @@ body {
 
 #header .title {
 	font-size: 16pt;
-	font-family: Segoe UI;
 	margin-left: 5pt;
 	display: inline-block;
 	vertical-align: middle;
 	color: #000;
 }
 
+#contentsWrapper {
+	position: relative;
+}
+
 #mainSection {
-	width: 100%;
+	height: 80%;
+	padding-top: 10%;
+	padding-bottom: 10%;
+}
+
+#mainSection .contents {
 	display: inline-block;
+	height: 100%;
+	width: 300%;
+	transition: margin-left 120ms linear;
 }
 
 #mainSection .content {
-	margin-top: 15pt;
+	float: left;
+	text-align: center;
+	width: 33.3333333%;
+
+	max-height: 100%;
+
+	-webkit-transform: translateZ(0);
+	overflow: auto;
 }
 
-#mainSection .title {
-	text-align: center;
-	font-size: 20pt;
+#loginPage {
+	position: relative;
+	top: 50%;
+
+	margin-top: -50px;
+	height: 150px;
 }
+
+.content-wrapper {
+
+}
+
 #mainSection .input {
 	width: 80%;
-	font-size: 10pt;
-	padding: 3pt;
+	font-size: 16pt;
+	padding: 3pt 5pt;
+
+	outline: none;
+	border: 1px solid;
+	border-color: #ccc;
+	box-shadow: none;
+
+	-webkit-appearance: none;
 }
 
 #mainSection .fields  {
-	margin-top: 15pt;
 	text-align: center;
 }
 
 #mainSection .field  {
 	width: 100%;
 	margin-top: 10pt;
+
+	display: inline-block;
 }
 #mainSection .field:first-child  {
 	margin-top: 0pt;
 }
 
+#mainSection .button {
+	width: 85pt;
+	height: 25pt;
+	display: inline-block;
+	border: none;
+	border-radius: 3pt;
+	background: #a03320;
+	box-shadow: none;
+	text-align: center;
+	font-size: 11pt;
+	font-weight: 600;
+	color: #fff;
+	margin-top: 15pt;
+	transition: background-color 120ms linear;
+	border-bottom: 1pt solid rgb(199, 138, 138);
+}
+#mainSection .button:hover {
+	background: #e24429;
+}
+
 #controls {
-	height: 40pt;
+	height: 1pt;
 	width: 100%;
 
 	line-height: 38pt;
-	position: relative;
+	position: absolute;
 
-	background: #f3f3f3;
 	padding-left: 10pt;
+	margin-left: 30%;
 }
 
 .control-button {
@@ -132,33 +189,20 @@ body {
     outline: none;
     border-color: silver;
 
-	-moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+	/*-moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
 	-webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
-	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);*/
 }
 
 #addNew {
 	text-align: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+
+	transition: top 120ms linear;
 }
-
-#addNew .add-new-button {
-	width: 115pt;
-	height: 25pt;
-
-	border: none;
-	border-radius: 6pt;
-	background: #e24429;
-	box-shadow: none;
-	text-align: center;
-	font-size: 15pt;
-	font-weight: 600;
-	color: #fff;
-	margin-top: 30pt;
-	transition: background-color 120ms linear;
-	border-bottom: 1pt solid rgb(199, 138, 138);
-}
-
-
 
 .username {
 	font-size: 10pt;
@@ -168,7 +212,6 @@ body {
 	width: 32pt;
 	height: 32pt;
 
-	background: blue;
 	margin-right: 15pt;
 }
 .url {
@@ -176,7 +219,6 @@ body {
 	font-weight: 600;
 	color: rgb(94,94,94);
 }
-
 
 #accountsPage {
 	width: 90%;
@@ -187,9 +229,16 @@ body {
 	border-bottom: 2pt solid #f2f2f2;
 }
 
+#accountsPage .accounts {
+	margin-top: 5pt;
+	margin-bottom: 26pt;
+	overflow: auto;
+}
+
 #accountsPage .account {
-	width: 100%;
-	padding: 5pt 0 5pt 0;
+	width: 95%;
+	padding: 5pt 0 5pt 5%;
+	text-align: left;
 
 	border-bottom: 1pt solid #f2f2f2;
 
@@ -212,6 +261,11 @@ body {
 #accountPreviewPage .account-wrapper {
 	padding-left: 15pt;
 	padding-top: 10pt;
+	text-align: left;
+}
+#accountPreviewPage .icon {
+	width: 48pt;
+	height: 48pt;
 }
 
 #accountPreviewPage .icon {
@@ -233,4 +287,15 @@ body {
 	float: right;
 	margin: 15pt 15pt 0 0;
 	font-size: 6pt;
+}
+
+#footer {
+	position: absolute;
+	width: 100%;
+	height: 10%;
+	text-align: center;
+	bottom: 0;
+	font-size: 7pt;
+	background: rgba(0, 0, 0, 0.10);
+	line-height: 300%;
 }
